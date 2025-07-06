@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr" style="scroll-behavior: smooth;">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melio Tasks - Votre gestionnaire de tâches gratuit</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -111,33 +111,40 @@
     body {
       overflow-x: hidden;
     }
+
+    @media (min-width: 768px) {
+      .desktop-menu { display: flex !important; }
+      .mobile-menu { display: none !important; }
+    }
+    @media (max-width: 767px) {
+      .desktop-menu { display: none !important; }
+      .mobile-menu { display: block !important; }
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-  <!-- Barre de navigation -->
-  <nav class="fixed top-0 left-0 right-0 w-full bg-gray-900/80 backdrop-blur-md z-50">
-    <!-- Suppression du max-w-7xl et mx-auto, on garde juste full width et padding mobile -->
-    <div class="w-full px-4 sm:px-6 py-4 flex justify-between items-center">
-      <a href="#"><img src="MelioLogo.png" alt="Logo Melio Tasks" class="h-8"></a>
-      
-      <!-- Menu desktop -->
-      <ul class="hidden md:flex space-x-6 text-white font-semibold">
-        <li><a href="#hero" class="hover:text-amber-500">Accueil</a></li>
-        <li><a href="#features" class="hover:text-amber-500">Fonctionnalités</a></li>
-        <li><a href="#action" class="hover:text-amber-500">En action</a></li>
-        <li><a href="#testimonials" class="hover:text-amber-500">Avis</a></li>
-        <li><a href="#download" class="hover:text-amber-500">Télécharger</a></li>
-        <li><a href="#contact" class="hover:text-amber-500">Nous contacter</a></li>
-      </ul>
 
-      <!-- Menu mobile -->
-      <div class="md:hidden relative">
+  <!-- BARRE DE NAVIGATION RESPONSIVE -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <a href="#"><img src="MelioLogo.png" alt="Logo Melio Tasks" class="h-8"></a>
+
+      <!-- MENU DÉSKTOP -->
+      <div class="hidden md:flex space-x-6 desktop-menu">
+        <a href="#hero" class="hover:text-amber-400">Accueil</a>
+        <a href="#features" class="hover:text-amber-400">Fonctionnalités</a>
+        <a href="#action" class="hover:text-amber-400">En action</a>
+        <a href="#testimonials" class="hover:text-amber-400">Avis</a>
+        <a href="#download" class="hover:text-amber-400">Télécharger</a>
+        <a href="#contact" class="hover:text-amber-400">Nous contacter</a>
+      </div>
+
+      <!-- MENU MOBILE (hamburger) -->
+      <div class="relative md:hidden mobile-menu">
         <button class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
-        <div class="dropdown-menu absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50" id="dropdown-menu">
+        <div class="dropdown-menu" id="dropdown-menu">
           <a href="#hero">Accueil</a>
           <a href="#features">Fonctionnalités</a>
           <a href="#action">En action</a>
