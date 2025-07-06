@@ -23,13 +23,6 @@
       filter: blur(60px);
       z-index: 0;
     }
-    /* Option pour supprimer le dégradé si nécessaire */
-    /*
-    .bg-blob {
-      display: none;
-    }
-    */
-    /* Menu déroulant */
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -58,7 +51,6 @@
     .dropdown-menu a:hover {
       background-color: #374151;
     }
-    /* Hamburger button */
     .hamburger {
       display: flex;
       flex-direction: column;
@@ -83,7 +75,6 @@
     .hamburger.active span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }
-    /* Effet sur les images du carrousel uniquement */
     .interactive-img {
       transition: all 0.3s ease;
     }
@@ -99,7 +90,6 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
-    /* Animations des boutons (uniquement changement de couleur, bordure fixe) */
     .btn-filled {
       border: 2px solid #f59e0b;
       transition: background 0.2s ease-out, color 0.2s ease-out;
@@ -144,13 +134,13 @@
   <!-- Section Hero -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
     <div class="bg-blob"></div>
-    <div class="relative z-10 px-8 grid md:grid-cols-2 gap-8 items-center">
-      <div class="text-center md:text-left">
+    <div class="relative z-10 px-4 sm:px-8 grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-center md:text-left md:pl-12">
         <h1 class="text-5xl md:text-6xl font-bold animate-fade-in">Melio Tasks</h1>
         <p class="text-xl md:text-2xl mt-4 animate-fade-in" style="animation-delay: 0.2s;">Organisez vos tâches, donnez des ailes à vos projets.</p>
-        <div class="mt-8 flex justify-center md:justify-start gap-4 animate-fade-in" style="animation-delay: 0.4s;">
-          <a href="https://apps.apple.com/fr/app/melio-tasks/id6747993532" class="btn-filled bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold">Télécharger sur iOS</a>
-          <a href="https://forms.gle/inECG8AANBGwDrvy9" class="btn-outlined bg-transparent text-amber-500 px-6 py-3 rounded-full font-semibold">Rejoindre la liste d'attente Android</a>
+        <div class="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4 animate-fade-in" style="animation-delay: 0.4s;">
+          <a href="https://apps.apple.com/fr/app/melio-tasks/id6747993532" class="btn-filled bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold text-center">Télécharger sur iOS</a>
+          <a href="https://forms.gle/inECG8AANBGwDrvy9" class="btn-outlined bg-transparent text-amber-500 px-6 py-3 rounded-full font-semibold text-center">Rejoindre la liste d'attente Android</a>
         </div>
       </div>
       <div class="flex justify-center md:justify-end">
